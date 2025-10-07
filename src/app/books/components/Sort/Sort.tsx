@@ -31,9 +31,9 @@ const Sort = () => {
   }, [])
 
   return (
-    <div ref={sortRef}>
+    <div ref={sortRef} className={styles.root}>
       <div onClick={() => setOpen(!open)}>
-        Сортування за: <b>{sortType.name}</b>
+        Сортування за: <b className={styles.b}>{sortType.name}</b>
       </div>
       {open && (
         <ul className={styles.popup}>

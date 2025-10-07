@@ -9,7 +9,7 @@ import { useSelector } from 'react-redux'
 import { RootState, useAppDispatch } from '@/redux/store'
 import { fetchData } from '@/redux/slices/booksSlice'
 import Sort from '@/app/books/components/Sort/Sort'
-import sortList, { SortItem } from '@/constants/sortList'
+import sortList from '@/constants/sortList'
 import { selectFilter, setFilters } from '@/redux/slices/filterSlice'
 import Pagination from '@/app/books/components/Pagination/Pagination'
 import { useRouter } from 'next/navigation'
@@ -18,7 +18,8 @@ import qs from 'qs'
 const BooksPage = () => {
   const dispatch = useAppDispatch()
 
-  const { sortType, currentPage, searchValue } = useSelector(selectFilter)
+  const { sortType, currentPage, searchValue, searchType } =
+    useSelector(selectFilter)
 
   const router = useRouter()
   const isSearch = useRef(false)
@@ -29,7 +30,7 @@ const BooksPage = () => {
   const getData = async () => {
     const sortBy = sortType.sortProperty.replace('-', '')
     const order = sortType.sortProperty.includes('-') ? 'asc' : 'desc'
-    const search = searchValue ? `&title_like=${searchValue}` : ''
+    const search = searchValue ? `&${searchType}_like=${searchValue}` : ''
 
     dispatch(
       fetchData({
@@ -58,7 +59,7 @@ const BooksPage = () => {
       router.push(`?${queryString}`)
     }
     isMounted.current = true
-  }, [sortType.sortProperty, currentPage])
+  }, [sortType.sortProperty, currentPage, searchType])
 
   // якщо був перший рендер то провірка url параметри і зберігаєм в redux
   useEffect(() => {
@@ -70,7 +71,8 @@ const BooksPage = () => {
         (obj) => obj.sortProperty === params.sortProperty,
       )
 
-      // todo type guard undefined
+      // todo type guard undefined. sortType точно найдеться бо це рідонлі константа
+      // @ts-ignore
       dispatch(setFilters({ ...params, sortType }))
       isSearch.current = true
     }
@@ -81,7 +83,7 @@ const BooksPage = () => {
     getData()
 
     isSearch.current = false
-  }, [sortType.sortProperty, searchValue, currentPage])
+  }, [sortType.sortProperty, searchValue, currentPage, searchType])
 
   if (status === 'error') {
     return <p>Сталася помилка при завантаженні книжок</p>

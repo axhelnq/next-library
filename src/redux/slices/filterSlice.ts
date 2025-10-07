@@ -11,6 +11,7 @@ interface FilterSliceState {
   searchValue: string
   currentPage: number
   sortType: SortType
+  searchType: string
 }
 
 const initialState: FilterSliceState = {
@@ -20,6 +21,7 @@ const initialState: FilterSliceState = {
     name: 'назва (DESC)',
     sortProperty: 'title',
   },
+  searchType: 'title',
 }
 
 export const filterSlice = createSlice({
@@ -39,12 +41,20 @@ export const filterSlice = createSlice({
     setSearchValue(state, action: PayloadAction<string>) {
       state.searchValue = action.payload
     },
+    setSearchType(state, action: PayloadAction<string>) {
+      state.searchType = action.payload
+    },
   },
 })
 
 export const selectFilter = (state: RootState) => state.filter
 
-export const { setSortType, setCurrentPage, setFilters, setSearchValue } =
-  filterSlice.actions
+export const {
+  setSortType,
+  setCurrentPage,
+  setFilters,
+  setSearchValue,
+  setSearchType,
+} = filterSlice.actions
 
 export default filterSlice.reducer

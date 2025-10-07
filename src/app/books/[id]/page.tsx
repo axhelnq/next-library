@@ -6,12 +6,13 @@ import Image from 'next/image'
 import styles from './Id.module.scss'
 import { RootState, useAppDispatch } from '@/redux/store'
 import { useSelector } from 'react-redux'
-import { useParams } from 'next/navigation'
-import { fetchData } from '@/redux/slices/booksSlice'
+import { useParams, useRouter } from 'next/navigation'
+import { deleteBook, fetchData } from '@/redux/slices/booksSlice'
 import { fetchUserById } from '@/redux/slices/usersSlice'
 import Link from 'next/link'
 
 const IdBookPage = () => {
+  const router = useRouter()
   const dispatch = useAppDispatch()
 
   const { id } = useParams() // отримуємо id з маршруту
@@ -32,10 +33,15 @@ const IdBookPage = () => {
     }
   }, [book])
 
-  const item = useSelector((state: RootState) => state.users)
+  const user = useSelector((state: RootState) => state.users.item)
 
   if (!book) {
     return <div>Книга не знайдена</div>
+  }
+
+  const handleDelete = () => {
+    dispatch(deleteBook(book.id))
+    router.push('/books')
   }
 
   return (
@@ -54,10 +60,12 @@ const IdBookPage = () => {
           <h2>{book.title}</h2>
           <div className={styles.info}>
             <b>{book.author}</b>
-            <em>{item.item.name}</em>
+            <em>{user.name}</em>
           </div>
-          <button>button</button>
-          <button>delete</button>
+          <div>
+            <button disabled={true}>trade</button>
+            <button onClick={handleDelete}>delete</button>
+          </div>
         </div>
       </div>
     </div>

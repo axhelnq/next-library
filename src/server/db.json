@@ -24,20 +24,6 @@
   ],
   "books": [
     {
-      "id": "1",
-      "title": "The Pragmatic Programmer",
-      "author": "Andrew Hunt, David Thomas",
-      "ownerId": "2",
-      "imageUrl": "/images/bookMock.png"
-    },
-    {
-      "id": "2",
-      "title": "Clean Code",
-      "author": "Robert C. Martin",
-      "ownerId": "2",
-      "imageUrl": "/images/bookMock.png"
-    },
-    {
       "id": "3",
       "title": "You Don’t Know JS Yet",
       "author": "Kyle Simpson",
@@ -52,11 +38,10 @@
       "imageUrl": "/images/bookMock.png"
     },
     {
-      "id": "5",
-      "title": "Design Patterns",
-      "author": "Erich Gamma et al.",
-      "ownerId": "5",
-      "imageUrl": "/images/bookMock.png"
+      "title": "test",
+      "author": "unkinoas",
+      "imageUrl": "/images/bookMock.png",
+      "id": "IZy_9-w"
     }
   ]
 }

@@ -1,0 +1,12 @@
+.root {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid #888;
+  padding: 4px 0;
+
+  &:last-child{
+    border-bottom: none;
+  }
+}

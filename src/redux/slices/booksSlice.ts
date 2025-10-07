@@ -31,25 +31,27 @@ export const fetchData = createAsyncThunk<BookItem[], Record<string, string>>(
   },
 )
 
-// export const fetchData = createAsyncThunk<PizzaItem[], Record<string, string>>(
-//   'pizzas/fetchItems',
-//   async (params) => {
-//     const { category, sortBy, order, search, currentPage } = params
-//     const { data } = await axios.get<PizzaItem[]>(
-//       `http://localhost:3001/items?_page=${currentPage}&_limit=4${category}&_sort=${sortBy}&_order=${order}${search}`,
-//     )
-//     return data
-//   },
-// )
+// удалення книги
+export const deleteBook = createAsyncThunk<void, string>(
+  'books/deleteBook',
+  async (id) => {
+    await axios.delete(`http://localhost:3001/books/${id}`)
+  },
+)
+
+// add book
+export const createBookAsync = createAsyncThunk(
+  'books/addBook',
+  async (newBook: Omit<BookItem, 'id' | 'ownerId'>) => {
+    const { data } = await axios.post('http://localhost:3001/books', newBook)
+    return data
+  },
+)
 
 export const booksSlice = createSlice({
   name: 'books',
   initialState,
-  reducers: {
-    // setItems(state, action: PayloadAction<PizzaItem[]>) {
-    //   state.items = action.payload
-    // },
-  },
+  reducers: {},
   extraReducers: (builder) => {
     builder.addCase(fetchData.pending, (state) => {
       state.status = Status.LOADING
@@ -66,9 +68,14 @@ export const booksSlice = createSlice({
       state.status = Status.ERROR
       state.items = []
     })
+    // видалення книжки
+    builder.addCase(deleteBook.fulfilled, (state, action) => {
+      state.items = state.items.filter((book) => book.id !== action.meta.arg)
+    })
+    builder.addCase(deleteBook.rejected, (state, action) => {
+      console.error('Failed to delete book:', action.payload)
+    })
   },
 })
-
-// export const { setItems } = pizzasSlice.actions
 
 export default booksSlice.reducer

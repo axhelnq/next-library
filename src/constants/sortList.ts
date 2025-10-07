@@ -11,5 +11,5 @@ const sortList: SortItem[] = [
 export default sortList
 
 // 3. Список книг (/books):
-//  • Пошук за name або author.
+//  • Пошук за title або author.
 //  • Сортування за алфавітом.
