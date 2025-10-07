@@ -1,21 +1,21 @@
 {
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "name": "ADMIN",
       "email": "admin@gmail.com",
       "password": "ADMIN",
       "role": "admin"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Ivan Petrenko",
       "email": "ivan@example.com",
       "password": "user123",
       "role": "user"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Olena Kovalenko",
       "email": "olena@example.com",
       "password": "user456",
@@ -24,74 +24,39 @@
   ],
   "books": [
     {
-      "id": 1,
-      "name": "Майстер і Маргарита",
-      "author": "Михайло Булгаков",
-      "photo": "https://placehold.co/600x900?text=Book+1",
-      "ownerId": 2
+      "id": "1",
+      "title": "The Pragmatic Programmer",
+      "author": "Andrew Hunt, David Thomas",
+      "ownerId": "2",
+      "imageUrl": "/images/bookMock.png"
     },
     {
-      "id": 2,
-      "name": "Кобзар",
-      "author": "Тарас Шевченко",
-      "photo": "https://placehold.co/600x900?text=Book+2",
-      "ownerId": 3
-    },
-    {
-      "id": 3,
-      "name": "The Pragmatic Programmer",
-      "author": "Andrew Hunt",
-      "photo": "https://placehold.co/600x900?text=Book+3",
-      "ownerId": 2
-    },
-    {
-      "id": 4,
-      "name": "Clean Code",
+      "id": "2",
+      "title": "Clean Code",
       "author": "Robert C. Martin",
-      "photo": "https://placehold.co/600x900?text=Book+4",
-      "ownerId": 3
+      "ownerId": "2",
+      "imageUrl": "/images/bookMock.png"
     },
     {
-      "id": 5,
-      "name": "Війна і мир",
-      "author": "Лев Толстой",
-      "photo": "https://placehold.co/600x900?text=Book+5",
-      "ownerId": 2
+      "id": "3",
+      "title": "You Don’t Know JS Yet",
+      "author": "Kyle Simpson",
+      "ownerId": "3",
+      "imageUrl": "/images/bookMock.png"
     },
     {
-      "id": 6,
-      "name": "1984",
-      "author": "George Orwell",
-      "photo": "https://placehold.co/600x900?text=Book+6",
-      "ownerId": 3
+      "id": "4",
+      "title": "Refactoring",
+      "author": "Martin Fowler",
+      "ownerId": "4",
+      "imageUrl": "/images/bookMock.png"
     },
     {
-      "id": 7,
-      "name": "Thinking, Fast and Slow",
-      "author": "Daniel Kahneman",
-      "photo": "https://placehold.co/600x900?text=Book+7",
-      "ownerId": 2
-    },
-    {
-      "id": 8,
-      "name": "Sapiens",
-      "author": "Yuval Noah Harari",
-      "photo": "https://placehold.co/600x900?text=Book+8",
-      "ownerId": 3
-    },
-    {
-      "id": 9,
-      "name": "Atomic Habits",
-      "author": "James Clear",
-      "photo": "https://placehold.co/600x900?text=Book+9",
-      "ownerId": 2
-    },
-    {
-      "id": 10,
-      "name": "The Hobbit",
-      "author": "J. R. R. Tolkien",
-      "photo": "https://placehold.co/600x900?text=Book+10",
-      "ownerId": 3
+      "id": "5",
+      "title": "Design Patterns",
+      "author": "Erich Gamma et al.",
+      "ownerId": "5",
+      "imageUrl": "/images/bookMock.png"
     }
   ]
 }

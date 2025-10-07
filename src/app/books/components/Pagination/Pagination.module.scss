@@ -1,0 +1,35 @@
+.root {
+  li {
+    display: inline-flex;
+
+    a {
+      display: inline;
+      color: #333;
+      padding: 10px;
+      border: 1px solid #333;
+      border-radius: 50%;
+      justify-content: center;
+      align-self: center;
+      width: 45px;
+      height: 45px;
+      margin-right: 10px;
+      text-align: center;
+      cursor: pointer;
+      transition: all .15s ease-in-out;
+
+      &:hover {
+        background-color: #333;
+        color: #fff;
+      }
+    }
+  }
+  // todo
+  //:global {
+  //  .selected {
+  //    a {
+  //      background-color: #333;
+  //      color: #fff;
+  //    }
+  //  }
+  //}
+}

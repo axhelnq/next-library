@@ -5,17 +5,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="37e808ce-2c08-4ebd-bc88-110c6681832a" name="Changes" comment="installed json-server and concurrently. Created script to launch server &amp; app at the same time">
-      <change afterPath="$PROJECT_DIR$/tailwind.config.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/books/components/CardItem/CardItem.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/books/components/CardItem/CardItem.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/books/components/Pagination/Pagination.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/books/components/Pagination/Pagination.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/books/components/Search/Search.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/books/components/Search/Search.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/books/components/Sort/Sort.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/books/components/Sort/Sort.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Header.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/constants/sortList.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/slices/booksSlice.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/slices/filterSlice.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/slices/usersSlice.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/types/book.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/types/user.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(Home)/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(Home)/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postcss.config.mjs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/(Home)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(Home)/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/books/[id]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/books/[id]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/books/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/books/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/books/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/books/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/not-found.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/not-found.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/types/book.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(Home)/Home.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/types/user.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/ReduxProvider.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/slices/bookSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/books/Books.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/slices/userSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/books/[id]/Id.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/db.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,6 +51,7 @@
       <list>
         <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
+        <option value="SCSS File" />
       </list>
     </option>
   </component>
@@ -67,6 +91,7 @@
     "js.debugger.nextJs.config.created.client": "true",
     "js.debugger.nextJs.config.created.server": "true",
     "last_opened_file_path": "/home/axhelnq/Codes/next-library",
+    "list.type.of.created.stylesheet": "SCSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -85,11 +110,11 @@
       <recent name="$PROJECT_DIR$/src/app/(Auth)/register" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/books/components/CardItem" />
+      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/public/images" />
       <recent name="$PROJECT_DIR$/src/app/me/books" />
-      <recent name="$PROJECT_DIR$/src/app/(Auth)" />
-      <recent name="$PROJECT_DIR$/src/app/(Home)" />
     </key>
   </component>
   <component name="RunManager" selected="npm.Next.js: server-side">
@@ -122,7 +147,7 @@
       <option name="presentableId" value="Default" />
       <updated>1759821709056</updated>
       <workItem from="1759821710429" duration="4460000" />
-      <workItem from="1759826182219" duration="2643000" />
+      <workItem from="1759826182219" duration="19025000" />
     </task>
     <task id="LOCAL-00001" summary="installed json-server and concurrently. Created script to launch server &amp; app at the same time">
       <option name="closed" value="true" />

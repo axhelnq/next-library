@@ -1,0 +1,27 @@
+/* src/app/globals.scss */
+:root {
+    --background: #FFF;
+    --foreground: #171717;
+    /* інші змінні */
+}
+
+/* Невеликий normalize / reset - можеш замінити на normalize.css якщо треба */
+* { box-sizing: border-box; }
+html,body,#root { height: 100%; }
+body {
+    margin: 0;
+    background: var(--background);
+    color: var(--foreground);
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Загальні утиліти, якщо потрібно: */
+.container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
